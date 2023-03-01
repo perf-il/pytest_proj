@@ -44,3 +44,14 @@ def my_slice(coll, start=0, end=None):
 
     return coll[normalized_start:normalized_end]
 
+def get_val(collection, key, default='git'):
+    """
+    Функция возвращает значение из словаря по переданному ключу, если ключ существует.
+    В ином случае возвращается значение default
+    :param collection: исходный словарь
+    :param key: ключ
+    :param default: возращаемое значение, если ключ не найден (по-умолчанию 'git')
+    :return: значение по ключу из словаря или default
+    """
+    return collection.get(key, default)
+
